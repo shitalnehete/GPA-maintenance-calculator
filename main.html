@@ -1,0 +1,253 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Marks Estimator </title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <style>
+            @media screen and (max-width:768px)  {
+		      .main  {
+			     width=100%;
+               }
+		    }
+            .main {
+                background: #fff;
+                font-family: 'Nunito', sans-serif;
+                padding-top: 35;
+            }
+            .main label {
+                padding: 10px 20px 10px 20px !important;
+                max-width: 90%;
+                margin-right: 40;
+                height: auto !important; 
+                background-color: #f6f7f9; 
+                color: #7b8b8e; 
+                font-size: 11pt;
+                font-weight: 500;
+                text-align: left;
+            }
+            .main input {
+                padding: 10px 2px 10px 2px !important; 
+                max-width: 20%; 
+                margin-bottom: 20;
+                height: auto !important; 
+                border: 1px solid #e3e3e3; 
+                border-radius: 3px; 
+                background-color: #fff; 
+                color: #7b8b8e; 
+                font-size: 12pt; 
+                text-align: center;
+                line-height: 20px !important; 
+                appearance: none; 
+                -webkit-appearance: none; 
+                -moz-appearance: none; 
+            } 
+            .main p {
+                font-size: 8pt;
+                color: red;
+                margin-bottom: 50;
+            }
+            .main button {
+                background: #6A41EA;
+                padding: 5px 10px 5px 10px;
+                color: #fff;
+                font-size: 11px;
+                border: solid #6A41EA;
+                border-radius: 3px;
+            }
+            .main .target1 {
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #e3e3e3; 
+		        font-size: 70px;
+		        height: 90px;
+                max-width: 20%;
+            }
+            .main .btn1 {
+                background: orange;
+                padding: 13px 30px 13px 30px;
+                color: #fff;
+                font-size: 11pt;
+                border: solid orange;
+                border-radius: 5px;
+            }
+            .main .btn2 {
+                background: #fff;
+                border: solid #f4f7f8;
+                color: orange;
+                padding: 13px 30px 13px 30px;
+                border-radius: 5px;
+                font-size: 11pt;
+            }
+            .main .top {
+                background: #fff;
+                padding: 30;
+            }
+            .main .bottom {
+                align-content: center;
+                height: auto;
+                border: solid transparent;
+                border-radius: 25px;
+                background: #f4f7f8;
+                padding: 30;
+                margin-top: 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <form name="marks">
+                <div clas="top">
+                    <center>
+                        <h2 style="color: #6A41EA">Performance Analysis</h2> <br>
+                        <input type="text" class="target1" name="target" id="target"><br>
+                        <p>Your expected pointer!! Goal!!</p>
+                        <button class="btn1" onclick="analyse(); return false;">Analyse</button>
+                        <button class="btn2" onclick="reset(); return false;">Reset</button>
+                    </center>
+                </div>
+                    
+                <div class="bottom">
+                    <center>
+                        <label>Term Test - I</label>
+                        <input type="text" class="TT1" id="TT1" onkeypress="return false"> <br>
+                        <label>Term Test - II</label>
+                        <input type="text" class="TT21" id="TT2" onkeypress="return false"> <br>
+                        <label>Viva and Practicals</label>
+                        <input type="text" class="VnP1" id="VnP" style="margin-right: 40" onkeypress="return false"> <br>
+                        <label>Semester Exam</label>
+                        <input type="text" class="SemExam1" id="SemExam" style="margin-right: 20" onkeypress="return false"> <br> <br>
+                        <label class="case1" id="case"> </label>
+                        <button onclick="prev(); return false;">Prev.</button>
+                        <button onclick="next(); return false;">Next</button>
+                    </center>
+                </div>
+            </form>
+        </div>
+        
+        <script type="text/javascript">
+            function Case1() {
+                if((document.marks.target.value<=6) && (document.marks.target.value>=5)) {
+                    document.getElementById("TT1").value = 12;
+                    document.getElementById("TT2").value = 13;
+                    document.getElementById("VnP").value = 12;
+                    document.getElementById("SemExam").value = 37; 
+                }
+                else if((document.marks.target.value<=7) && (document.marks.target.value>6)) {
+                    document.getElementById("TT1").value = 15;
+                    document.getElementById("TT2").value = 14;
+                    document.getElementById("VnP").value = 14;
+                    document.getElementById("SemExam").value = 44; 
+                }
+                else if((document.marks.target.value<=8) && (document.marks.target.value>7)) {
+                    document.getElementById("TT1").value = 16;
+                    document.getElementById("TT2").value = 18;
+                    document.getElementById("VnP").value = 14;
+                    document.getElementById("SemExam").value = 44; 
+                }
+                else if((document.marks.target.value<=9) && (document.marks.target.value>8)) {
+                    document.getElementById("TT1").value = 17;
+                    document.getElementById("TT2").value = 18;
+                    document.getElementById("VnP").value = 19;
+                    document.getElementById("SemExam").value = 59; 
+                }
+                else if((document.marks.target.value<=10) && (document.marks.target.value>9)) {
+                    document.getElementById("TT1").value = 16;
+                    document.getElementById("TT2").value = 17;
+                    document.getElementById("VnP").value = 20;
+                    document.getElementById("SemExam").value = 64; 
+                }
+            }
+            function Case2() {
+                if((document.marks.target.value<=6) && (document.marks.target.value>=5)) {
+                        document.getElementById("TT1").value = 11;
+                        document.getElementById("TT2").value = 10;
+                        document.getElementById("VnP").value = 14;
+                        document.getElementById("SemExam").value = 44; 
+                    }
+                    else if((document.marks.target.value<=7) && (document.marks.target.value>6)) {
+                        document.getElementById("TT1").value = 16;
+                        document.getElementById("TT2").value = 18;
+                        document.getElementById("VnP").value = 11;
+                        document.getElementById("SemExam").value = 35; 
+                    }
+                    else if((document.marks.target.value<=8) && (document.marks.target.value>7)) {
+                        document.getElementById("TT1").value = 15;
+                        document.getElementById("TT2").value = 14;
+                        document.getElementById("VnP").value = 19;
+                        document.getElementById("SemExam").value = 59; 
+                    }
+                    else if((document.marks.target.value<=9) && (document.marks.target.value>8)) {
+                        document.getElementById("TT1").value = 16;
+                        document.getElementById("TT2").value = 17;
+                        document.getElementById("VnP").value = 22;
+                        document.getElementById("SemExam").value = 44; 
+                    }
+                    else if((document.marks.target.value<=10) && (document.marks.target.value>9)) {
+                        document.getElementById("TT1").value = 16;
+                        document.getElementById("TT2").value = 17;
+                        document.getElementById("VnP").value = 22;
+                        document.getElementById("SemExam").value = 60; 
+                    }
+            }
+            function Case3() {
+                if((document.marks.target.value<=6) && (document.marks.target.value>=5)) {
+                        document.getElementById("TT1").value = 15;
+                        document.getElementById("TT2").value = 14;
+                        document.getElementById("VnP").value = 11;
+                        document.getElementById("SemExam").value = 35; 
+                    }
+                    else if((document.marks.target.value<=7) && (document.marks.target.value>6)) {
+                        document.getElementById("TT1").value = 13;
+                        document.getElementById("TT2").value = 12;
+                        document.getElementById("VnP").value = 17;
+                        document.getElementById("SemExam").value = 52; 
+                    }
+                    else if((document.marks.target.value<=8) && (document.marks.target.value>7)) {
+                        document.getElementById("TT1").value = 16;
+                        document.getElementById("TT2").value = 16;
+                        document.getElementById("VnP").value = 17;
+                        document.getElementById("SemExam").value = 52; 
+                    }
+                    else if((document.marks.target.value<=9) && (document.marks.target.value>8)) {
+                        document.getElementById("TT1").value = 16;
+                        document.getElementById("TT2").value = 16;
+                        document.getElementById("VnP").value = 20;
+                        document.getElementById("SemExam").value = 63; 
+                    }
+                    else if((document.marks.target.value<=10) && (document.marks.target.value>9)) {
+                        document.getElementById("TT1").value = 16;
+                        document.getElementById("TT2").value = 17;
+                        document.getElementById("VnP").value = 19;
+                        document.getElementById("SemExam").value = 62; 
+                    }
+            }
+            function analyse() {
+                document.getElementById("case").innerText = "Case 1 of 3";
+                Case1();
+            }
+            function next() {
+                if(document.getElementById("case").innerText == "Case 1 of 3") {
+                    document.getElementById("case").innerText = "Case 2 of 3";
+                    Case2();
+                }
+                else if(document.getElementById("case").innerText == "Case 2 of 3") {
+                    document.getElementById("case").innerText = "Case 3 of 3";
+                    Case3();
+                }
+            }
+            function prev() {
+                if(document.getElementById("case").innerText == "Case 2 of 3") {
+                    document.getElementById("case").innerText = "Case 1 of 3";
+                    Case1();
+                }
+                else if(document.getElementById("case").innerText == "Case 3 of 3") {
+                    document.getElementById("case").innerText = "Case 2 of 3";
+                    Case2();
+                }
+                function reset() {
+                    document.getElementByName("marks").reset();
+                }
+            }
+        </script>
+    </body>
+</html>
