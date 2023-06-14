@@ -13,7 +13,7 @@ To use this GPA Calculator web application, fork the repo and click on the HTML 
 Please refer to the code provided in this repository for further information on how to use and implement the GPA Calculator web application.
 
 ## User-interface
-<img src="Screenshot1.png" alt="Screen 1" title="Screen 1" width="600" height="600">
-<img src="Screenshot2.png" alt="Screen 2" title="Screen 2" width="600" height="600">
-<img src="Screenshot3.png" alt="Screen 3" title="Screen 3" width="600" height="600">
-<img src="Screenshot4.png" alt="Screen 4" title="Screen 4" width="600" height="600">
+<img src="Screenshot1.png" alt="Screen 1" title="Screen 1" width="500" height="600">
+<img src="Screenshot2.png" alt="Screen 2" title="Screen 2" width="500" height="600">
+<img src="Screenshot3.png" alt="Screen 3" title="Screen 3" width="500" height="600">
+<img src="Screenshot4.png" alt="Screen 4" title="Screen 4" width="500" height="600">
